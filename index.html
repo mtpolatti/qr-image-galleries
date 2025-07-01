@@ -1,29 +1,38 @@
 <html>
 <head>
-<title>Mapa Nuqui</title>
-<basefont size="2" face="Verdana">
-<script language="javascript" type="text/javascript">
-<!--
-var querystring = location.search;
--->
-</script>
+  <title>Mapa Nuqui</title>
+  <basefont size="2" face="Verdana">
+  <style>
+    img.responsive-image {
+      max-width: 100%;
+      max-height: 100vh;
+      height: auto;
+      width: auto;
+    }
+    body {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+  <script language="javascript" type="text/javascript">
+    var querystring = location.search;
+  </script>
 </head>
 
 <body link="#0000FF" vlink="#0000FF" alink="#FF0000">
-<div style="text-align: center;">
-<script language="javascript" type="text/javascript">
-<!--
-if (querystring != null) {
-with(document) {
-write('<img src=images/');
-write(querystring.replace('?',''));
-write('>');
-}
-}
-//-->
-
-</script>
-</div>
+  <div style="text-align: center;">
+    <script language="javascript" type="text/javascript">
+      if (querystring != null) {
+        with(document) {
+          write('<img class="responsive-image" src="images/');
+          write(querystring.replace('?',''));
+          write('">');
+        }
+      }
+    </script>
+  </div>
 </body>
-
 </html>
